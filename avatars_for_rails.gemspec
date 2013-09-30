@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = "social-stream@dit.upm.es"
   s.homepage = "http://github.com/ging/avatars_for_rails"
 
-  s.files = `git ls-files`.split("\n")
+  #s.files = `git ls-files`.split("\n")
 
   # Gem dependencies
   #
@@ -22,14 +22,14 @@ Gem::Specification.new do |s|
   if defined?(PLATFORM) && PLATFORM == 'java'
     s.add_runtime_dependency('rmagick4j','>= 0.3.0')
   else
-    s.add_runtime_dependency('rmagick','>= 2.13.1')
+    s.add_runtime_dependency('mini_magick','= 3.5.0')
   end
 
   # Development Gem dependencies
   #
   s.add_development_dependency('rails', '>= 3.1.0')
   # Testing database
-  s.add_development_dependency('sqlite3-ruby')
+  s.add_development_dependency('sqlite3')
   # Debugging
   s.add_development_dependency('debugger')
   # Specs

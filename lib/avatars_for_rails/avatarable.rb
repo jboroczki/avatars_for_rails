@@ -85,7 +85,7 @@ module AvatarsForRails
 
     def avatar_magick_image
       @avatar_magick_image ||=
-        Magick::Image.read(avatar_tmp_full_path).first
+        MiniMagick::Image.open(avatar_tmp_full_path)
     end
 
     def cp_avatar_to_tmp_path
